@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>فروشگاه آلبالو | خرید آنلاین</title>
+  <meta name="description" content="فروشگاه اینترنتی آلبالو؛ کالای دیجیتال، پوشاک، لوازم خانه و لوازم تحریر با ارسال سریع.">
+  <meta name="theme-color" content="#a3123a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='10' cy='22' r='6' fill='%23a3123a'/%3E%3Ccircle cx='23' cy='21' r='6' fill='%23a3123a'/%3E%3Cpath d='M16 4c-1 6-3 11-6 15M16 4c1 5 4 10 7 14' stroke='%234f7a28' stroke-width='2' fill='none'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <a class="skip" href="#main" data-skip>پرش به محتوای اصلی</a>
+  <div class="announce" id="announce" hidden></div>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="logo" href="#/" aria-label="صفحه اصلی">
+        <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+          <path d="M16 4c-1 6-3 11-6 15M16 4c1 5 4 10 7 14" stroke="#4f7a28" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M16 4c4-2 8-1 10 1-4 1-8 1-10-1z" fill="#6aa136"/>
+          <circle cx="10" cy="22" r="6" fill="currentColor"/>
+          <circle cx="23" cy="21" r="6" fill="currentColor"/>
+        </svg>
+        <span id="brand">آلبالو</span>
+      </a>
+
+      <nav class="main-nav" aria-label="منوی اصلی">
+        <a href="#/shop" data-nav="shop">فروشگاه</a>
+        <a href="#/blog" data-nav="blog">مجله</a>
+      </nav>
+
+      <form class="search" id="searchForm" role="search">
+        <label class="sr-only" for="q">جستجوی محصول</label>
+        <input id="q" type="search" placeholder="جستجو در محصولات…" autocomplete="off">
+        <button type="submit" aria-label="جستجو" id="searchBtn"></button>
+      </form>
+
+      <div class="header-actions">
+        <div class="auth-area" id="authArea"></div>
+        <button class="cart-btn" type="button" data-action="open-cart" aria-label="باز کردن سبد خرید">
+          <span id="cartIcon"></span>
+          <span class="cart-label">سبد خرید</span>
+          <span class="cart-badge" id="cartBadge" hidden>۰</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1"><div class="container"><div class="sk-page" aria-busy="true"></div></div></main>
+
+  <footer class="site-footer" id="footer"></footer>
+
+  <div class="overlay" id="overlay" data-action="close-cart" hidden></div>
+  <aside class="drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" inert>
+    <div class="drawer-head">
+      <h2 id="drawerTitle">سبد خرید</h2>
+      <button type="button" class="icon-btn" data-action="close-cart" aria-label="بستن سبد خرید" id="drawerClose"></button>
+    </div>
+    <div class="drawer-body" id="drawerBody"></div>
+    <div class="drawer-foot" id="drawerFoot"></div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript><p style="padding:24px;text-align:center">برای استفاده از فروشگاه، جاوااسکریپت مرورگر را فعال کنید.</p></noscript>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
